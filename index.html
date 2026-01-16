@@ -1,1 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 
+  <title>PuzzleGlyph — Daily Number & Logic Puzzles | The Glyphverse Hub</title>
+  <meta name="description" content="PuzzleGlyph is the hub for the Glyphverse: daily number puzzles, logic puzzles, quick-play, and skills practice. All free, in-browser." />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+
+  <link rel="canonical" href="https://puzzleglyph.com/" />
+  <meta name="theme-color" content="#0b0f14" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="PuzzleGlyph — Daily Number & Logic Puzzles" />
+  <meta property="og:description" content="Daily number puzzles + logic puzzles • Quick play • Skills lab. All free. In-browser." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://puzzleglyph.com/" />
+  <!-- Temporary: reuse NumberGlyph og.png until you make a PuzzleGlyph one -->
+  <meta property="og:image" content="https://numberglyph.com/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="PuzzleGlyph — The Glyphverse hub page with links to games" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PuzzleGlyph — Daily Number & Logic Puzzles" />
+  <meta name="twitter:description" content="Daily number puzzles + logic puzzles • Quick play • Skills lab. All free. In-browser." />
+  <meta name="twitter:image" content="https://numberglyph.com/og.png" />
+
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- Theme (optional) -->
+  <script>
+  (function () {
+    try {
+      const KEY = "pg_theme_v1";
+      const saved = localStorage.getItem(KEY);
+      if (saved === "light" || saved === "dark") {
+        document.documentElement.dataset.theme = saved;
+        return;
+      }
+      const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+    } catch {}
+  })();
+  </script>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"PuzzleGlyph",
+    "url":"https://puzzleglyph.com/",
+    "description":"The Glyphverse hub: daily number puzzles, logic puzzles, quick play, and skills practice."
+  }
+  </script>
+
+  <!-- Google Analytics (same as NumberGlyph) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PKSTTX5JNG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PKSTTX5JNG');
+  </script>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img class="brandMark" src="https://numberglyph.com/logo-sigma.png" width="28" height="28" alt="Glyphverse sigma mark" />
+      <div class="brandText">
+        <div class="brandTitle">PuzzleGlyph</div>
+        <div class="brandSub">Welcome to the Glyphverse</div>
+      </div>
+    </div>
+
+    <div class="topbarRight">
+      <a class="ghostBtn" href="https://numberglyph.com/?nosplash=1" rel="noopener">Play NumberGlyph</a>
+
+      <label class="switch" aria-label="Toggle light/dark theme">
+        <input id="themeToggle" type="checkbox" />
+        <span class="slider"></span>
+      </label>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="panel" aria-label="Pick a game">
+      <div class="hero">
+        <div class="heroKicker">Pick a game</div>
+        <h1 class="heroTitle">Fast puzzles. Clean wins.</h1>
+        <p class="heroP">All free. In-browser. Daily puzzles + quick-play + skills practice.</p>
+      </div>
+
+      <div class="cols">
+        <!-- DAILY -->
+        <section class="col colDaily" aria-label="Daily puzzles">
+          <div class="colHead">
+            <div class="colTitle">Daily puzzles</div>
+            <div class="colHint">Easy • Medium • Hard</div>
+          </div>
+
+          <div class="grid">
+            <a class="pill" href="https://numberglyph.com/?nosplash=1">
+              <img class="icon" src="https://numberglyph.com/logos/numberglyph.svg" alt="NumberGlyph icon" />
+              <div class="pillText">
+                <div class="pillName">NumberGlyph</div>
+                <div class="pillSub">Σ + Shape</div>
+              </div>
+            </a>
+
+            <a class="pill" href="https://numberglyph.com/opglyph/">
+              <img class="icon" src="https://numberglyph.com/logos/opglyph.svg" alt="OpGlyph icon" />
+              <div class="pillText">
+                <div class="pillName">OpGlyph</div>
+                <div class="pillSub">Fill ops</div>
+              </div>
+            </a>
+
+            <a class="pill" href="https://numberglyph.com/hieroglyph/">
+              <img class="icon" src="https://numberglyph.com/logos/hieroglyph.svg" alt="Hieroglyph icon" />
+              <div class="pillText">
+                <div class="pillName">Hieroglyph</div>
+                <div class="pillSub">Decode</div>
+              </div>
+            </a>
+
+            <a class="pill" href="https://numberglyph.com/connectglyph/">
+              <img class="icon" src="https://numberglyph.com/logos/connectglyph.svg" alt="ConnectGlyph icon" />
+              <div class="pillText">
+                <div class="pillName">ConnectGlyph</div>
+                <div class="pillSub">4×4 groups</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="soon">
+            <div class="soonLabel">Coming soon</div>
+            <div class="soonRow two">
+              <span class="soonPill">NumberCliff</span>
+              <span class="soonPill">OctCliff</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- QUICK -->
+        <section class="col colQuick" aria-label="Quick play">
+          <div class="colHead">
+            <div class="colTitle">Quick play</div>
+            <div class="colHint">Instant replay</div>
+          </div>
+
+          <div class="grid">
+            <a class="pill" href="https://numberglyph.com/focusglyph/">
+              <img class="icon" src="https://numberglyph.com/logos/focusglyph.svg" alt="FocusGlyph icon" />
+              <div class="pillText">
+                <div class="pillName">FocusGlyph</div>
+                <div class="pillSub">1→25</div>
+              </div>
+            </a>
+
+            <a class="pill" href="https://numberglyph.com/memoryglyph/">
+              <img class="icon" src="https://numberglyph.com/logos/memoryglyph.svg" alt="MemoryGlyph icon" />
+              <div class="pillText">
+                <div class="pillName">MemoryGlyph</div>
+                <div class="pillSub">Repeat</div>
+              </div>
+            </a>
+
+            <span class="pill pillSoon" aria-hidden="true">
+              <div class="pillText">
+                <div class="pillName">Coming soon</div>
+                <div class="pillSub">SpeedGlyph</div>
+              </div>
+            </span>
+          </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="col colSkills" aria-label="Skills lab">
+          <div class="colHead">
+            <div class="colTitle">Skills lab</div>
+            <div class="colHint">Practice</div>
+          </div>
+
+          <div class="grid">
+            <a class="pill" href="https://numberglyph.com/skills/multiglyph/">
+              <img class="icon" src="https://numberglyph.com/logos/multiglyph.svg" alt="MultiGlyph icon" />
+              <div class="pillText">
+                <div class="pillName">MultiGlyph</div>
+                <div class="pillSub">× reps</div>
+              </div>
+            </a>
+
+            <span class="pill pillSoon" aria-hidden="true">
+              <div class="pillText">
+                <div class="pillName">Coming soon</div>
+                <div class="pillSub">DivGlyph</div>
+              </div>
+            </span>
+          </div>
+        </section>
+      </div>
+
+      <div class="bottom">
+        <div class="bottomLeft">Made by Sean • @numberglyph</div>
+        <div class="bottomRight">
+          <a class="ghostBtn" href="https://numberglyph.com/about" rel="noopener">About</a>
+          <a class="ghostBtn" href="https://numberglyph.com/blog" rel="noopener">Blog</a>
+          <a class="ghostBtn" href="https://numberglyph.com/privacy" rel="noopener">Privacy</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+  (function(){
+    const KEY = "pg_theme_v1";
+    const t = document.getElementById("themeToggle");
+    if (!t) return;
+
+    function setTheme(theme){
+      document.documentElement.dataset.theme = theme;
+      try { localStorage.setItem(KEY, theme); } catch {}
+      t.checked = (theme === "light");
+    }
+
+    // init toggle state
+    try {
+      const cur = document.documentElement.dataset.theme;
+      t.checked = (cur === "light");
+    } catch {}
+
+    t.addEventListener("change", () => {
+      setTheme(t.checked ? "light" : "dark");
+    });
+  })();
+  </script>
+</body>
+</html>

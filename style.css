@@ -349,3 +349,27 @@ body[data-first-load="true"] .grid .pill:nth-child(4){ animation-delay: .15s; }
 :root[data-theme="light"] .slider:before{ background:#0b0f14; }
 
 .switch input:checked + .slider:before{ transform: translateX(22px); }
+
+
+
+.maker{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  text-decoration:none;
+  color:inherit;
+  opacity:.85;
+}
+.maker:hover{ opacity:1; }
+
+.makerImg{
+  width:18px;
+  height:18px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.14);
+}
+:root[data-theme="light"] .makerImg{
+  border-color: rgba(11,15,20,.14);
+}
+
+

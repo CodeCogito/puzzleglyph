@@ -237,6 +237,20 @@
     t.addEventListener("change", () => {
       setTheme(t.checked ? "light" : "dark");
     });
+
+    const pills = document.querySelectorAll(".grid .pill");
+    if (pills.length) {
+      document.body.dataset.firstLoad = "true";
+      let remaining = pills.length;
+      pills.forEach((pill) => {
+        pill.addEventListener("animationend", () => {
+          remaining -= 1;
+          if (remaining <= 0) {
+            delete document.body.dataset.firstLoad;
+          }
+        }, { once: true });
+      });
+    }
   })();
   </script>
 </body>

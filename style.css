@@ -186,6 +186,7 @@ a{color:inherit}
   grid-template-columns: 1fr;
   gap: 8px;
   padding: 10px 12px 8px;
+  perspective: 900px;
 }
 @media (max-width: 520px){
   .grid{ grid-template-columns: 1fr 1fr; padding: 10px 10px 8px; }
@@ -206,7 +207,25 @@ a{color:inherit}
 }
 .pill:hover{ background: var(--pillHover); transform: translateY(-1px); }
 
-.icon{ width:22px; height:22px; flex:0 0 auto; }
+body[data-first-load="true"] .grid .pill{
+  transform-origin: top;
+  animation: flipboard .6s ease both;
+}
+body[data-first-load="true"] .grid .pill:nth-child(2){ animation-delay: .05s; }
+body[data-first-load="true"] .grid .pill:nth-child(3){ animation-delay: .10s; }
+body[data-first-load="true"] .grid .pill:nth-child(4){ animation-delay: .15s; }
+
+@keyframes flipboard{
+  0%{ transform: rotateX(82deg); opacity: 0; }
+  60%{ transform: rotateX(-6deg); opacity: 1; }
+  100%{ transform: rotateX(0deg); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  body[data-first-load="true"] .grid .pill{ animation: none; }
+}
+
+.icon{ width:26px; height:26px; flex:0 0 auto; }
 .pillText{ min-width:0; }
 .pillName{
   font-weight: 950;
@@ -229,7 +248,7 @@ a{color:inherit}
 
 @media (max-width: 520px){
   .pill{ padding: 9px 8px; gap: 8px; min-height: 44px; }
-  .icon{ width:20px; height:20px; }
+  .icon{ width:24px; height:24px; }
   .pillName{ font-size: 12.5px; }
   .pillSub{ font-size: 11px; }
 

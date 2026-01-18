@@ -11,31 +11,26 @@
   <link rel="canonical" href="https://puzzleglyph.com/" />
   <meta name="theme-color" content="#0b0f14" />
 
-  <!-- Perf: you load assets from numberglyph.com -->
   <link rel="preconnect" href="https://numberglyph.com" crossorigin>
   <link rel="dns-prefetch" href="//numberglyph.com">
 
-  <!-- Icons (temporary reuse; you can copy these locally later) -->
   <link rel="icon" href="https://numberglyph.com/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="48x48" href="https://numberglyph.com/favicon-48x48.png">
   <link rel="icon" type="image/png" sizes="32x32" href="https://numberglyph.com/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="https://numberglyph.com/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="https://numberglyph.com/apple-touch-icon.png">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="PuzzleGlyph — Daily Number & Logic Puzzles" />
   <meta property="og:description" content="Daily number puzzles + logic puzzles • Quick play • Skills lab. All free. In-browser." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://puzzleglyph.com/" />
   <meta property="og:site_name" content="PuzzleGlyph" />
   <meta property="og:locale" content="en_GB" />
-  <!-- Temporary: reuse NumberGlyph og.png until you make a PuzzleGlyph one -->
   <meta property="og:image" content="https://numberglyph.com/og.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="PuzzleGlyph — The Glyphverse hub page with links to games" />
+  <meta property="og:image:alt" content="PuzzleGlyph — the Glyphverse hub page with links to games" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="PuzzleGlyph — Daily Number & Logic Puzzles" />
   <meta name="twitter:description" content="Daily number puzzles + logic puzzles • Quick play • Skills lab. All free. In-browser." />
@@ -45,7 +40,6 @@
 
   <link rel="stylesheet" href="./style.css" />
 
-  <!-- Theme (optional) -->
   <script>
   (function () {
     try {
@@ -61,32 +55,53 @@
   })();
   </script>
 
-  <!-- JSON-LD -->
+  <!-- JSON-LD: Website + FAQ -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "name":"PuzzleGlyph",
-    "url":"https://puzzleglyph.com/",
-    "description":"The Glyphverse hub: daily number puzzles, logic puzzles, quick play, and skills practice."
-  }
+  [
+    {
+      "@context":"https://schema.org",
+      "@type":"WebSite",
+      "name":"PuzzleGlyph",
+      "url":"https://puzzleglyph.com/",
+      "description":"The Glyphverse hub: daily number puzzles, logic puzzles, quick play, and skills practice.",
+      "sameAs":["https://x.com/numberglyph"]
+    },
+    {
+      "@context":"https://schema.org",
+      "@type":"FAQPage",
+      "mainEntity":[
+        {
+          "@type":"Question",
+          "name":"Is PuzzleGlyph free?",
+          "acceptedAnswer":{"@type":"Answer","text":"Yes — everything linked from PuzzleGlyph is free to play in the browser."}
+        },
+        {
+          "@type":"Question",
+          "name":"Do I need an account?",
+          "acceptedAnswer":{"@type":"Answer","text":"No account needed. Just click a game and play."}
+        },
+        {
+          "@type":"Question",
+          "name":"What kinds of puzzles are in the Glyphverse?",
+          "acceptedAnswer":{"@type":"Answer","text":"Daily number puzzles, logic puzzles, quick-play focus/memory games, and skills practice games."}
+        }
+      ]
+    }
+  ]
   </script>
 
-  <!-- Google Analytics (GA4) + cross-domain linker -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PKSTTX5JNG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    // IMPORTANT: cross-domain linking between hub + main site
-    gtag('config', 'G-PKSTTX5JNG', {
-      linker: { domains: ['puzzleglyph.com', 'numberglyph.com'] }
-    });
+    gtag('config', 'G-PKSTTX5JNG', { linker: { domains: ['puzzleglyph.com', 'numberglyph.com'] } });
   </script>
 </head>
 
 <body>
+  <a class="skip" href="#games">Skip to games</a>
+
   <header class="topbar">
     <div class="brand">
       <img class="brandMark" src="https://numberglyph.com/logo-sigma.png" width="28" height="28" alt="Glyphverse sigma mark" />
@@ -97,7 +112,7 @@
     </div>
 
     <div class="topbarRight">
-      <a class="ghostBtn" href="https://numberglyph.com/?nosplash=1" rel="noopener noreferrer">Play NumberGlyph</a>
+      <a class="ghostBtn" href="https://numberglyph.com/?nosplash=1" rel="noopener">Play NumberGlyph</a>
 
       <label class="switch" aria-label="Toggle light/dark theme">
         <input id="themeToggle" type="checkbox" />
@@ -112,9 +127,16 @@
         <div class="heroKicker">Pick a game</div>
         <h1 class="heroTitle">Fast puzzles. Clean wins.</h1>
         <p class="heroP">All free. In-browser. Daily puzzles + quick-play + skills practice.</p>
+
+        <div class="heroActions" role="navigation" aria-label="Jump links">
+          <a class="chipLink" href="#games">Games</a>
+          <a class="chipLink" href="#how">How it works</a>
+          <a class="chipLink" href="#types">Browse by type</a>
+          <a class="chipLink" href="#faq">FAQ</a>
+        </div>
       </div>
 
-      <div class="cols">
+      <div id="games" class="cols">
         <!-- DAILY -->
         <section class="col colDaily" aria-label="Daily puzzles">
           <div class="colHead">
@@ -123,32 +145,32 @@
           </div>
 
           <div class="grid">
-            <a class="pill" href="https://numberglyph.com/?nosplash=1" rel="noopener noreferrer">
-              <img class="icon" src="https://numberglyph.com/logos/numberglyph.svg" alt="NumberGlyph icon" />
+            <a class="pill" href="https://numberglyph.com/?nosplash=1" rel="noopener">
+              <img class="icon" src="https://numberglyph.com/logos/numberglyph.svg" alt="" />
               <div class="pillText">
                 <div class="pillName">NumberGlyph</div>
                 <div class="pillSub">Σ + Shape</div>
               </div>
             </a>
 
-            <a class="pill" href="https://numberglyph.com/opglyph/" rel="noopener noreferrer">
-              <img class="icon" src="https://numberglyph.com/logos/opglyph.svg" alt="OpGlyph icon" />
+            <a class="pill" href="https://numberglyph.com/opglyph/" rel="noopener">
+              <img class="icon" src="https://numberglyph.com/logos/opglyph.svg" alt="" />
               <div class="pillText">
                 <div class="pillName">OpGlyph</div>
                 <div class="pillSub">Fill ops</div>
               </div>
             </a>
 
-            <a class="pill" href="https://numberglyph.com/hieroglyph/" rel="noopener noreferrer">
-              <img class="icon" src="https://numberglyph.com/logos/hieroglyph.svg" alt="Hieroglyph icon" />
+            <a class="pill" href="https://numberglyph.com/hieroglyph/" rel="noopener">
+              <img class="icon" src="https://numberglyph.com/logos/hieroglyph.svg" alt="" />
               <div class="pillText">
                 <div class="pillName">Hieroglyph</div>
                 <div class="pillSub">Decode</div>
               </div>
             </a>
 
-            <a class="pill" href="https://numberglyph.com/connectglyph/" rel="noopener noreferrer">
-              <img class="icon" src="https://numberglyph.com/logos/connectglyph.svg" alt="ConnectGlyph icon" />
+            <a class="pill" href="https://numberglyph.com/connectglyph/" rel="noopener">
+              <img class="icon" src="https://numberglyph.com/logos/connectglyph.svg" alt="" />
               <div class="pillText">
                 <div class="pillName">ConnectGlyph</div>
                 <div class="pillSub">4×4 groups</div>
@@ -173,16 +195,16 @@
           </div>
 
           <div class="grid">
-            <a class="pill" href="https://numberglyph.com/focusglyph/" rel="noopener noreferrer">
-              <img class="icon" src="https://numberglyph.com/logos/focusglyph.svg" alt="FocusGlyph icon" />
+            <a class="pill" href="https://numberglyph.com/focusglyph/" rel="noopener">
+              <img class="icon" src="https://numberglyph.com/logos/focusglyph.svg" alt="" />
               <div class="pillText">
                 <div class="pillName">FocusGlyph</div>
                 <div class="pillSub">1→25</div>
               </div>
             </a>
 
-            <a class="pill" href="https://numberglyph.com/memoryglyph/" rel="noopener noreferrer">
-              <img class="icon" src="https://numberglyph.com/logos/memoryglyph.svg" alt="MemoryGlyph icon" />
+            <a class="pill" href="https://numberglyph.com/memoryglyph/" rel="noopener">
+              <img class="icon" src="https://numberglyph.com/logos/memoryglyph.svg" alt="" />
               <div class="pillText">
                 <div class="pillName">MemoryGlyph</div>
                 <div class="pillSub">Repeat</div>
@@ -206,8 +228,8 @@
           </div>
 
           <div class="grid">
-            <a class="pill" href="https://numberglyph.com/skills/multiglyph/" rel="noopener noreferrer">
-              <img class="icon" src="https://numberglyph.com/logos/multiglyph.svg" alt="MultiGlyph icon" />
+            <a class="pill" href="https://numberglyph.com/skills/multiglyph/" rel="noopener">
+              <img class="icon" src="https://numberglyph.com/logos/multiglyph.svg" alt="" />
               <div class="pillText">
                 <div class="pillName">MultiGlyph</div>
                 <div class="pillSub">× reps</div>
@@ -226,19 +248,85 @@
 
       <div class="bottom">
         <div class="bottomLeft">
-          <a class="maker" href="https://numberglyph.com/about" rel="noopener noreferrer">
+          <a class="maker" href="https://numberglyph.com/about" rel="noopener">
             <img class="makerImg" src="https://numberglyph.com/sean.png" alt="Sean" width="18" height="18" loading="lazy" decoding="async" />
             <span>Made by Sean • @numberglyph</span>
           </a>
         </div>
 
         <div class="bottomRight">
-          <a class="ghostBtn" href="https://numberglyph.com/about" rel="noopener noreferrer">About</a>
-          <a class="ghostBtn" href="https://numberglyph.com/blog" rel="noopener noreferrer">Blog</a>
-          <a class="ghostBtn" href="https://numberglyph.com/privacy" rel="noopener noreferrer">Privacy</a>
+          <a class="ghostBtn" href="https://numberglyph.com/about" rel="noopener">About</a>
+          <a class="ghostBtn" href="https://numberglyph.com/blog" rel="noopener">Blog</a>
+          <a class="ghostBtn" href="https://numberglyph.com/privacy" rel="noopener">Privacy</a>
         </div>
       </div>
     </section>
+
+    <!-- NEW: content blocks so this isn't "thin" -->
+    <section id="how" class="panel panelLite" aria-labelledby="howTitle" style="margin-top:14px">
+      <div class="sectionHead">
+        <h2 id="howTitle" class="h2">What is PuzzleGlyph? (60 seconds)</h2>
+        <p class="mutedP">A calm hub for daily puzzles — pick one, get a clean win, move on.</p>
+      </div>
+
+      <div class="learnGrid">
+        <div class="learnCard">
+          <h3 class="h3">Daily puzzles</h3>
+          <p class="mutedP">One puzzle per day (often with multiple difficulties). Great for streaks without grind.</p>
+        </div>
+        <div class="learnCard">
+          <h3 class="h3">Quick play</h3>
+          <p class="mutedP">Instant replay games — focus, memory, speed. Perfect when you’ve got 60–120 seconds.</p>
+        </div>
+        <div class="learnCard">
+          <h3 class="h3">Skills lab</h3>
+          <p class="mutedP">Practice modes that feel like tiny arcade drills — short sessions, measurable improvement.</p>
+        </div>
+      </div>
+
+      <div class="note">
+        Tip: start with <b>NumberGlyph</b> (daily number deduction) or <b>ConnectGlyph</b> (4×4 logic groups).
+      </div>
+    </section>
+
+    <section id="types" class="panel panelLite" aria-labelledby="typesTitle" style="margin-top:14px">
+      <div class="sectionHead">
+        <h2 id="typesTitle" class="h2">Browse by type</h2>
+        <p class="mutedP">These are the terms people search for — use them as entry points.</p>
+      </div>
+
+      <div class="tagGrid" role="navigation" aria-label="Browse tags">
+        <a class="tag" href="#games">Daily puzzles</a>
+        <a class="tag" href="#games">Number puzzles</a>
+        <a class="tag" href="#games">Logic puzzles</a>
+        <a class="tag" href="#games">Brain training</a>
+        <a class="tag" href="#games">Quick games</a>
+        <a class="tag" href="#games">Memory</a>
+        <a class="tag" href="#games">Focus</a>
+      </div>
+    </section>
+
+    <section id="faq" class="panel panelLite" aria-labelledby="faqTitle" style="margin-top:14px">
+      <div class="sectionHead">
+        <h2 id="faqTitle" class="h2">FAQ</h2>
+      </div>
+
+      <div class="faq">
+        <details class="qa">
+          <summary>Is PuzzleGlyph free?</summary>
+          <p>Yes — everything linked from PuzzleGlyph is free to play in the browser.</p>
+        </details>
+        <details class="qa">
+          <summary>Do I need an account?</summary>
+          <p>No account needed. Just click a game and play.</p>
+        </details>
+        <details class="qa">
+          <summary>Where do the games live?</summary>
+          <p>PuzzleGlyph is the hub. The games themselves live on NumberGlyph.com.</p>
+        </details>
+      </div>
+    </section>
+
   </main>
 
   <script>
@@ -258,11 +346,8 @@
       t.checked = (cur === "light");
     } catch {}
 
-    t.addEventListener("change", () => {
-      setTheme(t.checked ? "light" : "dark");
-    });
+    t.addEventListener("change", () => setTheme(t.checked ? "light" : "dark"));
 
-    // (optional) your first-load animation cleanup hook
     const pills = document.querySelectorAll(".grid .pill");
     if (pills.length) {
       document.body.dataset.firstLoad = "true";
@@ -278,3 +363,4 @@
   </script>
 </body>
 </html>
+

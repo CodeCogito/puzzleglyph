@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "updated_utc": "2026-01-18T00:00:00Z",
+  "site": {
+    "name": "PuzzleGlyph",
+    "url": "https://puzzleglyph.com/",
+    "source": "Curated hub index for the Glyphverse"
+  },
+  "categories": [
+    { "id": "daily", "label": "Daily puzzles" },
+    { "id": "quick", "label": "Quick play" },
+    { "id": "skills", "label": "Skills lab" },
+    { "id": "soon", "label": "Coming soon" }
+  ],
+  "tags": [
+    "numbers",
+    "logic",
+    "deduction",
+    "arithmetic",
+    "memory",
+    "focus",
+    "speed",
+    "practice",
+    "daily",
+    "quick"
+  ],
+  "games": [
+    {
+      "name": "NumberGlyph",
+      "slug": "numberglyph",
+      "category": "daily",
+      "tags": ["numbers", "deduction", "daily"],
+      "time_to_play_sec": 120,
+      "modes": ["easy", "medium", "hard"],
+      "url_play": "https://numberglyph.com/?nosplash=1",
+      "url_home": "https://numberglyph.com/",
+      "url_guide": "https://numberglyph.com/getgoing",
+      "description": "Daily number deduction. Wordle-style tiles plus Σ + Shape fingerprint clues. Solve in 6."
+    },
+    {
+      "name": "OpGlyph",
+      "slug": "opglyph",
+      "category": "daily",
+      "tags": ["numbers", "arithmetic", "logic", "daily"],
+      "time_to_play_sec": 120,
+      "modes": ["easy", "medium", "hard"],
+      "url_play": "https://numberglyph.com/opglyph/",
+      "url_home": "https://numberglyph.com/opglyph/",
+      "url_guide": "https://numberglyph.com/opglyph/",
+      "description": "Fill in operators (+ − × ÷) to make the equations work. Compute left-to-right. Daily modes."
+    },
+    {
+      "name": "Hieroglyph",
+      "slug": "hieroglyph",
+      "category": "daily",
+      "tags": ["logic", "deduction", "numbers", "daily"],
+      "time_to_play_sec": 180,
+      "modes": ["easy", "medium", "hard"],
+      "url_play": "https://numberglyph.com/hieroglyph/",
+      "url_home": "https://numberglyph.com/hieroglyph/",
+      "url_guide": "https://numberglyph.com/hieroglyph/",
+      "description": "Deduce what each glyph equals (0–9) from equations. Submit a full mapping in 6 tries."
+    },
+    {
+      "name": "ConnectGlyph",
+      "slug": "connectglyph",
+      "category": "daily",
+      "tags": ["logic", "deduction", "daily"],
+      "time_to_play_sec": 150,
+      "modes": ["easy", "medium", "hard"],
+      "url_play": "https://numberglyph.com/connectglyph/",
+      "url_home": "https://numberglyph.com/connectglyph/",
+      "url_guide": "https://numberglyph.com/connectglyph/",
+      "description": "4×4 connections puzzle: find 4 groups of 4 that share a theme. Daily modes."
+    },
+    {
+      "name": "FocusGlyph",
+      "slug": "focusglyph",
+      "category": "quick",
+      "tags": ["focus", "speed", "practice", "quick"],
+      "time_to_play_sec": 45,
+      "modes": ["easy", "medium", "hard"],
+      "url_play": "https://numberglyph.com/focusglyph/",
+      "url_home": "https://numberglyph.com/focusglyph/",
+      "url_guide": "https://numberglyph.com/focusglyph/",
+      "description": "Tap 1→25 as fast as you can. Best time + streak saved locally per mode."
+    },
+    {
+      "name": "MemoryGlyph",
+      "slug": "memoryglyph",
+      "category": "quick",
+      "tags": ["memory", "practice", "quick"],
+      "time_to_play_sec": 90,
+      "modes": ["kids", "easy", "medium", "hard"],
+      "url_play": "https://numberglyph.com/memoryglyph/",
+      "url_home": "https://numberglyph.com/memoryglyph/",
+      "url_guide": "https://numberglyph.com/memoryglyph/",
+      "description": "Simon-style memory with glyphs. One-more loop. Optional haptics on supported devices."
+    },
+    {
+      "name": "MultiGlyph",
+      "slug": "multiglyph",
+      "category": "skills",
+      "tags": ["numbers", "practice", "speed"],
+      "time_to_play_sec": 120,
+      "modes": [],
+      "url_play": "https://numberglyph.com/skills/multiglyph/",
+      "url_home": "https://numberglyph.com/skills/multiglyph/",
+      "url_guide": "https://numberglyph.com/skills/multiglyph/",
+      "description": "Multiplication sprint: pick time + cap, tap fast. PB + stats saved locally."
+    },
+
+    {
+      "name": "SpeedGlyph",
+      "slug": "speedglyph",
+      "category": "soon",
+      "tags": ["speed", "practice", "quick"],
+      "time_to_play_sec": 60,
+      "modes": [],
+      "url_play": "",
+      "url_home": "",
+      "url_guide": "",
+      "description": "Coming soon: a fast reaction / speed mini-game."
+    },
+    {
+      "name": "DivGlyph",
+      "slug": "divglyph",
+      "category": "soon",
+      "tags": ["numbers", "practice", "speed"],
+      "time_to_play_sec": 120,
+      "modes": [],
+      "url_play": "",
+      "url_home": "",
+      "url_guide": "",
+      "description": "Coming soon: division practice, arcade-style."
+    },
+    {
+      "name": "NumberCliff",
+      "slug": "numbercliff",
+      "category": "soon",
+      "tags": ["numbers", "logic", "daily"],
+      "time_to_play_sec": 180,
+      "modes": [],
+      "url_play": "",
+      "url_home": "",
+      "url_guide": "",
+      "description": "Coming soon: a new daily numbers game in the Glyphverse."
+    },
+    {
+      "name": "OctCliff",
+      "slug": "octcliff",
+      "category": "soon",
+      "tags": ["logic", "deduction", "daily"],
+      "time_to_play_sec": 180,
+      "modes": [],
+      "url_play": "",
+      "url_home": "",
+      "url_guide": "",
+      "description": "Coming soon: an octagonal logic/pattern puzzle concept."
+    }
+  ]
+}
